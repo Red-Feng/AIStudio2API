@@ -62,4 +62,4 @@ RUN uv run camoufox fetch
 
 EXPOSE 2048 3120 9000 9222
 
-CMD ["uv", "run", "python", "launch_camoufox.py", "--headless", "--virtual-display", "--server-port", "2048", "--stream-port", "3120"]
+CMD ["uv", "run", "python", "launch_camoufox.py", "--virtual-display", "--server-port", "2048", "--stream-port", "3120"]
