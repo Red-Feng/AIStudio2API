@@ -55,6 +55,8 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
 
 COPY pyproject.toml uv.lock ./
 
+COPY README.md ./
+
 RUN uv sync --frozen
 
 COPY . .
