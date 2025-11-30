@@ -54,12 +54,9 @@ RUN apt-get update && apt-get install -y \
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
 
 COPY pyproject.toml uv.lock ./
-
-COPY README.md ./
+COPY . .
 
 RUN uv sync --frozen
-
-COPY . .
 
 RUN uv run camoufox fetch
 
